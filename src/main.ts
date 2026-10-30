@@ -41,6 +41,13 @@ export function createGame(): Phaser.Game {
   };
 
   const game = new Phaser.Game(config);
+
+  // 首帧布局可能晚于 Phaser 的父容器测量，强制刷新一次缩放
+  if (!weapp) {
+    window.addEventListener('load', () => game.scale.refresh());
+    setTimeout(() => game.scale.refresh(), 120);
+  }
+
   (window as unknown as { __phaser?: Phaser.Game }).__phaser = game;
   return game;
 }
