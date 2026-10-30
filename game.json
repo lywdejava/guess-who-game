@@ -1,9 +1,0 @@
-{
-  "deviceOrientation": "portrait",
-  "showStatusBar": false,
-  "networkTimeout": {
-    "request": 5000,
-    "downloadFile": 5000
-  },
-  "subpackages": []
-}
