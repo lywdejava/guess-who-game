@@ -1,0 +1,25 @@
+{
+  "name": "guess-who-mp",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "猜猜我是谁 - 微信小游戏（Phaser 3.80.1 + TypeScript + Vite）",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build:web": "vite build",
+    "build": "npm run typecheck && vite build --mode weapp",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "3.80.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "terser": "^5.36.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}
