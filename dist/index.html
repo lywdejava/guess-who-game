@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#050607">
+<title>猜猜我是谁</title>
+<style>
+  html,body{height:100%;margin:0;background:#050607;overflow:hidden;overscroll-behavior:none}
+  body{display:flex;align-items:center;justify-content:center;touch-action:none;-webkit-tap-highlight-color:transparent}
+  /* 9:16 自适应满屏：短边贴边、长边居中留黑 */
+  #game{
+    width:min(100vw,56.25vh);
+    height:min(100vh,177.78vw);
+    image-rendering:pixelated;
+  }
+  #game canvas{display:block;image-rendering:pixelated}
+</style>
+  <script type="module" crossorigin src="./assets/index-CA6ij_f4.js"></script>
+</head>
+<body>
+  <div id="game"></div>
+</body>
+</html>
