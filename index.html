@@ -18,9 +18,23 @@
   }
   #game canvas{display:block;image-rendering:pixelated}
 </style>
-  <script type="module" crossorigin src="./assets/index-CA6ij_f4.js"></script>
+  <script type="module" crossorigin src="./assets/index-C72wzl_v.js"></script>
 </head>
 <body>
   <div id="game"></div>
+  <script>
+    // 显式按 9:16 计算容器尺寸，避免 Phaser 启动时量到未定稿的 CSS min() 尺寸
+    (function () {
+      var g = document.getElementById('game');
+      function fit() {
+        var s = Math.min(window.innerWidth / 360, window.innerHeight / 640);
+        g.style.width = Math.floor(360 * s) + 'px';
+        g.style.height = Math.floor(640 * s) + 'px';
+      }
+      window.addEventListener('resize', fit);
+      window.addEventListener('orientationchange', fit);
+      fit();
+    })();
+  </script>
 </body>
 </html>
